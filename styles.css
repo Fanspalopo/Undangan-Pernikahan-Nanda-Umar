@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    color: #d4af37; /* Emas */
+    margin-top: 20px;
+}
+
+/* Specific styles for Bismillah text */
+.invitation p:first-of-type {
+    font-size: 2.1em; /* Increase font size */
+    text-align: center; /* Center the text */
+    color: #d4af37; /* Dark green color */
+    font-weight: bold; /* Bold text */
+    margin: 20px 0; /* Add margin */
+    font-family: 'Arial', sans-serif; /* Change font family */
+}
+
+.invitation {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.invitation::before {
+    content: '';
+    background-image: url('kuning.jpg'); /* Ganti dengan URL gambar bunga */
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -30px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    opacity: 0.5;
+}
+
+.turut-mengundang h3 {
+    color: #d4af37;
+    margin-top: 20px;
+}
+
+.form-container {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #d4af37; /* Emas */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b29c2e; /* Warna emas lebih gelap saat hover */
+}
+
+.map-container {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+audio {
+    display: none; /* Sembunyikan audio di halaman */
+}

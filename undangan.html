@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Undangan Pernikahan</h1>
+
+    <div class="form-container">
+        <h2>Silakan Isi Nama Anda</h2>
+        <input type="text" id="guestName" placeholder="Masukkan Nama Anda" />
+        <button onclick="showInvitation()">Kirim</button>
+        <p id="greeting" style="display:none; text-align:center;"></p>
+    </div>
+
+    <div class="invitation" id="invitation" style="display: none;">
+        <p><strong>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</strong></p>
+        <p>Kepada Yth. Bapak/Ibu/Saudara(i) 
+            <h1><span id="guestNameDisplay2"></span></p></h1>
+        <p>Assalamualaikum warahmatullahi wabarakatuh</p>
+        <p>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan dengan ridha dan rahmat-Nya, kami mengundang Bapak/Ibu/Saudara(i) <span id="guestNameDisplay1"></span> untuk menghadiri acara pernikahan cucu, keponakan kami:</p>
+        <p><strong>Ananda Fajria Salsabhila, S.Ap.</strong> dengan <strong>Umar Asis, SE.</strong></p>
+        <p>Yang InsyaAllah Akan Diselenggarakan pada:</p>
+        <p><strong>Hari Sabtu, 26 Oktober 2024</strong><br>
+        *Akad Nikah Pukul 10.00 WITA<br>
+        *Resepsi Pukul 19.00 - Selesai WITA</p>
+        <p>Di Jalan Andi Sewang Krg, Muntu No 21 Labakkang-Pangkep</p>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara(i) <span id="guestNameDisplay2"></span> berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+        <p>Assalamualaikum warahmatullahi wabarakatuh</p>
+
+        <div class="turut-mengundang">
+            <h3>Hormat kami yang mengundang:</h3>
+            <p>Alm. Irsal Amir & Alm. Nurhartati.</p>
+            <p>*Syamsuddin Husain Asri & Faridawati.</p>
+            <p>*H. Amir Nurdin & Hj. Rostiana.</p>
+            <h3>Turut Mengundang:</h3>
+            <p>*Hartono, S.H., M.M. & Muzdalifah Nur, S.Sos.</p>
+            <p>*Hertaslin, S.H., M.H. & Nuraeni, SKM., M.Tr., Adm.Kes.</p>
+            <p>*Faizal Intisari Amir & Nurhasana.</p>
+            <p>*Lutfi Zulkiflu Amir, SE. & Hj. Indirayanti.</p>
+            <p>*dr. Andi Erlangga Isprasetia, AIFO-K. & Rezky Yulianti Amir, S.Kep.</p>
+            <p>*M.Septian Rahmat J. & Laeli Damayanti Amir, S.Si.</p>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <h2>Lokasi Acara</h2>
+        <iframe src="https://maps.app.goo.gl/9ue3CTyVwZppMD8i6 " allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <script>
+        function showInvitation() {
+            const name = document.getElementById("guestName").value;
+            const greeting = document.getElementById("greeting");
+            if (name) {
+                greeting.style.display = "block";
+                greeting.innerText = `Selamat ${name}, Anda diundang untuk menghadiri acara pernikahan!`;
+                document.getElementById("guestNameDisplay1").innerText = name;
+                document.getElementById("guestNameDisplay2").innerText = name;
+                document.getElementById("invitation").style.display = "block";
+                document.querySelector(".form-container").style.display = "none";
+            } else {
+                alert("Silakan masukkan nama Anda.");
+            }
+        }
+    </script>
+</body>
+</html>
